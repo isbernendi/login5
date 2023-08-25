@@ -1,0 +1,199 @@
+<html>
+<head>
+<title> login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#131423" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="mks.css">
+<link rel="icon" type="/x-icon" href="/favicon.ico">
+<script type="text/javascript" src="jquery.min.js"></script> 
+</head>
+<body>
+<body class="bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-4 mr-a box-semua" id="main" style="float:none;">
+				<div class="row">
+					<div class="col-12">	
+						<div class="row">
+							<div class="col-12">
+							<div class="logo bmh-50 text-center">
+<p style="color:#D8D8D8;font-size:35px; text-align:center;margin-top:15px;margin-bottom:10px;text-shadow: 2px 2px 4px #111;"><b>Wifi hotspot</b>
+							</div>
+						</div>
+                       <div class="row">
+						<div class="bawah-judul text-black"><p><h4>Layanan internet unlimited<br>INFO ! Pilih signal terbaik dilokasi anda berada<h4></p></div>
+						</div>
+						<p style="margin-top:-5px">
+							<div class="row">
+							<div class="col-12">
+								<div class="card ">
+									<div class="login">
+	</div>			
+<button class="small-button" onclick="openLogin(event, 'KV')" id="kodevoucher"> <b>Voucher</b></button>
+<button class="small-button" onclick="openLogin(event, 'UP')" id="userpass"> <b>Member</b></button> 	
+<p style="margin-top:10px">
+$(if error)
+<div class="alert alert-dismissible alert-info">
+ <small>$(error)</small>
+</div>
+$(endif)
+      <div id="KV" class="tabcontent">
+$(if chap-id)
+        <form name="sendinkv" action="$(link-login-only)" method="post">
+          <input type="hidden" name="username" />
+          <input type="hidden" name="password" />
+          <input type="hidden" name="dst" value="$(link-orig)" />
+          <input type="hidden" name="popup" value="true" />
+        </form>
+        <script type="text/javascript" src="/md5.js"></script>
+        <script type="text/javascript">
+          function doLoginkv() {
+            document.sendinkv.username.value = document.loginkv.usernamekv.value;
+            document.sendinkv.password.value = hexMD5('$(chap-id)' + document.loginkv.passwordkv.value + '$(chap-challenge)');
+            document.sendinkv.submit();
+            return false;
+          }
+        </script>
+        $(endif)
+<form name="loginkv" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLoginkv()" $(endif)>
+<input type="hidden" name="dst" value="$(link-orig)" />
+<input type="hidden" name="popup" value="true" />
+
+<p style="margin-top:25px">
+     <div class="form-group">
+ <p style="color:#333;font-size:14px; text-align:center">Masukan kode voucher</p>
+ <p style="margin-top:15px">
+<b><input style="text-align:center" type="text"oninput="this.value = this.value.toUpperCase()"  class="form-control" name="username" onblur="password.value=username.value" placeholder="KODE VOUCHER" required="required" autocomplete="on"></b>
+<input type="hidden" class="form-control" placeholder="Password" name="password">
+								</form>
+<script type="text/javascript">
+              function updateInput(passwd){
+              document.getElementById("pass").value = passwd;
+              }
+            </script>
+			<p style="margin-top:10px">
+<button type="submit" class="button-gadang">LOGIN</button>
+</form>
+<p style="margin-top:5px">
+</div>
+</div>
+      <div id="UP" class="tabcontent">
+        $(if chap-id)
+        <form name="sendinup" action="$(link-login-only)" method="post">
+          <input type="hidden" name="username" />
+          <input type="hidden" name="password" />
+          <input type="hidden" name="dst" value="$(link-orig)" />
+          <input type="hidden" name="popup" value="true" />
+        </form>
+        <script type="text/javascript" src="/md5.js"></script>
+        <script type="text/javascript">
+          function doLoginup() {
+            document.sendinup.username.value = document.loginup.usernameup.value;
+            document.sendinup.password.value = hexMD5('$(chap-id)' + document.loginup.passwordup.value + '$(chap-challenge)');
+            document.sendinup.submit();
+            return false;
+          }
+        </script>
+        $(endif)
+<form name="loginup" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLoginup()" $(endif)>
+<input type="hidden" name="dst" value="$(link-orig)" />
+<input type="hidden" name="popup" value="true" />
+  <p style="margin-top:25px">
+	 <p style="color:#333;font-size:14px; text-align:center">Masukan Username dan Password</p> 
+<p  style="margin-top:15px;">	
+ <input style="text-align:center" type="text" class="form-contro2" name="username" placeholder="Username" required="required" autocomplete="off">
+ <input style="text-align:center" type="text" class="form-contro2" placeholder="Password" name="password"required="required" autocomplete="off">
+<p style="margin-top:10px">
+		<button type="button" class="small-button1"onclick="window.location='https://laksa19.github.io/myqr';"><b>QR CODE</b></button>
+	
+	<button type="submit" class="small-button2">LOGIN</button>
+<p style="margin-top:10px">
+</div>	
+<script>
+function openLogin(evt, loginName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(loginName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("kodevoucher").click();
+</script>
+
+								<p style="margin-top:10px">
+								<p style="font-size:13px;text-align:center"><font color="#333">
+							 $(if trial == 'yes') 
+Uji coba gratis klik  <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><font color="#111"><b> . Gratis</b></a></font><br />
+							  $(endif)</font></p>	
+							<p style="margin-top:15px">
+							
+							<a href="status.html">
+<p style="font-size:20px;text-align:center"><font color="#333">
+<b> PAKET HOTSPOT <b/></font>
+	<p style="margin-top:5px">
+					  <table class="table table-bordered table-hover mr-b-10">
+								        <th>Voucher</th>
+										<th>Durasi</th>
+										<th>Keterangan</th>
+									</tr>
+									<tr>
+									<td>Rp. 2.000</td>
+										<td>3 jam</td>
+										<td>Ready</td>
+									</tr>
+									<tr>
+									<td>Rp. 4.000</td>
+										<td>24 jam</td>
+										<td>Ready</td>
+										</tr>
+									<tr>
+									
+									<td>Rp. 20.000</td>
+										<td>7 hari</td>
+										<td>Ready</td>	
+									</tr>
+									<tr>
+									<td>Rp. 50.000</td>
+										<td>30 hari</td>
+										<td>Ready</td></a>
+					</table>	
+					<p style="margin-top:5px">
+					<p style="font-size:12px;text-align:center"><font color="#333">Info lanjut hubungi : 08122-000-000	</font></p>	
+				<p style="margin-top:-5px">
+									<p style="margin-top:5px">
+								<div class="row">
+							<div class="col-12">
+							</div>
+							</div>
+								</div>
+							</div>
+						</div>
+		<div class="row">
+		<div class="cardx">
+		</div></div>					
+</div>
+	<div class="col-8">
+		<div class="row">
+		</div>					
+	</div>
+</div>
+</div>
+	<p style="margin-top:5px">
+<div class="text-center text-grey" style="font-size: 80%">&copy; Copyright 2021 | <a style="color: grey" href="http://fb.com/ber.nendi">isbernendi</a> - All rights reserved
+</div>
+</div>
+</script>
+</body>
+</html>
+
