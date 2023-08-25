@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title> login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#131423" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="mks.css">
+<link rel="icon" type="/x-icon" href="/favicon.ico">
+
+<script type="text/javascript" src="jquery.min.js"></script> 
+
+</head>
+<body>
+
+<body class="bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-4 mr-a box-semua" id="main" style="float:none;">
+				<div class="row">
+					<div class="col-12">	
+						<div class="row">
+							<div class="col-12">
+							<div class="logo bmh-50 text-center">
+							
+<p style="color:#fff;font-size:35px; text-align:center;margin-top:15px;margin-bottom:10px;text-shadow: 2px 2px 4px #111;"><b>Kevin.net</b>
+							</div>
+						</div>
+					
+                       <div class="row">
+					   
+						<div class="bawah-judul text-grey"><p><h4>Layanan internet unlimited<br>INFO ! Pilih signal terbaik dilokasi anda berada<h4></p></div>
+						</div>
+						<p style="margin-top:-5px">
+							<div class="row">
+							<div class="col-12">
+								<div class="card ">
+									<div class="login">
+
+	</div>			
+						
+<button class="small-button" onclick="openLogin(event, 'KV')" id="kodevoucher"> <b>Voucher</b></button>
+							
+<button class="small-button" onclick="openLogin(event, 'UP')" id="userpass"> <b>Member</b></button> 							
+									
+<p style="margin-top:10px">
+
+
+
+
+
+<!-- Login 1 kolom-->
+      <div id="KV" class="tabcontent">
+
+        <form name="sendinkv" action="$(link-login-only)" method="post">
+          <input type="hidden" name="username" />
+          <input type="hidden" name="password" />
+          <input type="hidden" name="dst" value="$(link-orig)" />
+          <input type="hidden" name="popup" value="true" />
+        </form>
+        <script type="text/javascript" src="/md5.js"></script>
+        <script type="text/javascript">
+          function doLoginkv() {
+            document.sendinkv.username.value = document.loginkv.usernamekv.value;
+            document.sendinkv.password.value = hexMD5('$(chap-id)' + document.loginkv.passwordkv.value + '$(chap-challenge)');
+            document.sendinkv.submit();
+            return false;
+          }
+        </script>
+   
+
+
+  
+
+  
+<form name="loginkv" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLoginkv()" $(endif)>
+<input type="hidden" name="dst" value="$(link-orig)" />
+<input type="hidden" name="popup" value="true" />
+
+ <!--keterangan error-->
+
+<!--keterangan error tutup--> 
+<p style="margin-top:25px">
+     <div class="form-group">
+ <p style="color:#fff;font-size:14px; text-align:center">Masukan kode voucher</p>
+ <p style="margin-top:15px">
+<b><input style="text-align:center" type="text" class="form-control" name="username" onblur="password.value=username.value" placeholder="kode voucher" required="required" autocomplete="off"></b>
+<input type="hidden" class="form-control" placeholder="Password" name="password">
+								</form>
+
+<script type="text/javascript">
+              function updateInput(passwd){
+              document.getElementById("pass").value = passwd;
+              }
+            </script>
+			<p style="margin-top:10px">
+<button type="button" class="small-button1 "onclick="window.location='https://laksa19.github.io/myqr';"><b>QR CODE</b></button>						
+<button type="submit" class="small-button2">LOGIN</button>
+</form>
+<p style="margin-top:5px">
+</div>
+</div>
+
+<!--kolom 1 tutup-->
+
+
+<!-- Login 2 kolom -->
+      <div id="UP" class="tabcontent">
+     
+        <form name="sendinup" action="$(link-login-only)" method="post">
+          <input type="hidden" name="username" />
+          <input type="hidden" name="password" />
+          <input type="hidden" name="dst" value="$(link-orig)" />
+          <input type="hidden" name="popup" value="true" />
+        </form>
+
+		
+        <script type="text/javascript" src="/md5.js"></script>
+        <script type="text/javascript">
+          function doLoginup() {
+            document.sendinup.username.value = document.loginup.usernameup.value;
+            document.sendinup.password.value = hexMD5('$(chap-id)' + document.loginup.passwordup.value + '$(chap-challenge)');
+            document.sendinup.submit();
+            return false;
+          }
+        </script>
+      
+
+	
+		
+		
+
+		
+		
+<form name="loginup" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLoginup()" $(endif)>
+<input type="hidden" name="dst" value="$(link-orig)" />
+<input type="hidden" name="popup" value="true" />
+
+ <!--keterangan error-->
+
+<!--keterangan error tutup--> 
+
+  <p style="margin-top:25px">
+	 <p style="color:#fff;font-size:14px; text-align:center">Masukan Username dan Password</p> 
+
+<p  style="margin-top:15px;">	
+ <input style="text-align:center" type="text" class="form-contro2" name="username" placeholder="username" required="required" autocomplete="off">
+
+ <input style="text-align:center" type="text" class="form-contro2" placeholder="password" name="password"required="required" autocomplete="off">
+
+<p style="margin-top:10px">
+
+		<button type="button" class="small-button1"onclick="window.location='https://laksa19.github.io/myqr';"><b>QR CODE</b></button>
+	
+	
+	<button type="submit" class="small-button2">LOGIN</button>
+	
+<p style="margin-top:10px">
+</div>	
+
+<script>
+function openLogin(evt, loginName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(loginName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("kodevoucher").click();
+</script>
+<!--login kolom 2 tutup-->
+
+								<p style="margin-top:5px">
+								<p style="font-size:12px;text-align:center"><font color="#fff">
+							
+Mau icip klik  <a href="https://github.com/isbernendi73/gudang/raw/master/LOGIN4.zip"><font color="#fff"><b> . Download</b></a></font><br />
+							 </font></p>	
+							<p style="margin-top:15px">
+							
+							<a href="status.html">
+<p style="font-size:20px;text-align:center"><font color="#fff">
+<b> PAKET HOTSPOT <b/></font>
+	<p style="margin-top:5px">
+					  <table class="table table-bordered table-hover mr-b-10">
+					
+								        <th>Voucher</th>
+										<th>Durasi</th>
+										<th>Keterangan</th>
+							
+					            </tr> 
+								<tr>
+									<td>Rp. 2.000</td>
+										<td>3 jam</td>
+										<td>Ready</td>
+									</tr>
+									<tr>
+									<td>Rp. 5.000</td>
+										<td>24 jam</td>
+										<td>Ready</td>
+										</tr>
+									<tr>
+									
+									<td>Rp. 20.000</td>
+										<td>7 hari</td>
+										<td>Ready</td>	
+									</tr>
+									<tr>
+									<td>Rp. 50.000</td>
+										<td>30 hari</td>
+										<td>Ready</td></a>
+					</table>	
+					<p style="margin-top:5px">
+					<p style="font-size:12px;text-align:center"><font color="#fff">Info lanjut hubungi : 081234567890	</font></p>	
+				<p style="margin-top:-5px">
+							
+									<p style="margin-top:5px">
+								<div class="row">
+							<div class="col-12">
+									
+							</div>
+				
+				
+				
+							</div>
+								</div>
+							</div>
+						</div>
+		<div class="row">
+		<div class="cardx">
+		</div></div>					
+</div>
+	<div class="col-8">
+		<div class="row">
+	
+		</div>
+	
+								
+	</div>
+</div>
+</div>
+	<p style="margin-top:5px">
+<div class="text-center text-grey" style="font-size: 80%">&copy; Copyright 2021 | <a style="color: white" href="http://fb.com/ber.nendi">isbernendi</a> - All rights reserved
+</div>
+</div>
+<Script Language='Javascript'>
+document.write(unescape('%0A%20%20%20%20%3C%21%2D%2D%20%6A%51%75%65%72%79%20%2D%2D%3E%0A%20%20%20%20%3C%73%63%72%69%70%74%20%73%72%63%3D%22%6A%73%2F%6A%71%75%65%72%79%2E%6A%73%22%3E%3C%2F%73%63%72%69%70%74%3E%0A%20%20%20%20%3C%73%63%72%69%70%74%20%73%72%63%3D%22%6A%73%2F%62%6F%6F%74%73%74%72%61%70%2E%6D%69%6E%2E%6A%73%22%3E%3C%2F%73%63%72%69%70%74%3E%0A%09%3C%73%63%72%69%70%74%20%73%72%63%3D%22%6A%73%2F%70%6D%69%6E%63%73%73%2E%6A%73%22%3E%3C%2F%73%63%72%69%70%74%3E'));
+
+</Script>
+<script type="text/javascript">
+<!--
+document.login.username.focus();
+document.getElementById('title').innerHTML = window.location.hostname + " > login";
+
+// login page
+var username = document.login.username;
+var password = document.login.password;
+var luser = document.getElementById("luser");
+var lpass = document.getElementById("lpass");
+var btnmem = document.getElementById("btnmem");
+var btnvcr = document.getElementById("btnvcr");
+
+// set password = username
+function setpass(){
+  var user = username.value		
+  password.value = user;
+}
+username.onchange = setpass;
+btnmem.style.backgroundColor = "#73818f";
+btnvcr.style.backgroundColor = "rgb(0, 153, 187)";  
+btntrial.style.backgroundColor = "#73818f";
+
+// change to voucher mode
+function voucher(){
+  username.focus();
+  username.onchange = setpass;
+  username.placeholder = "Voucher";
+  password.type = "hidden";
+  password.value = username.value;  
+  btnmem.style.backgroundColor = "#73818f";
+  btnvcr.style.backgroundColor = "rgb(0, 153, 187)";  
+  btntrial.style.backgroundColor = "#73818f";  
+}
+
+// change to member mode
+function member(){
+  username.focus();
+  username.onchange = "";
+  username.placeholder = "Username";
+  password.type= "password";
+  password.value = "";
+  btnmem.style.backgroundColor = "rgb(0, 153, 187)"; 
+  btnvcr.style.backgroundColor = "#73818f";
+  btntrial.style.backgroundColor = "#73818f"; 
+}
+
+//-->
+</script>
+</body>
+</html>
+
