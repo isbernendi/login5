@@ -35,13 +35,14 @@
 <button class="small-button" onclick="openLogin(event, 'KV')" id="kodevoucher"> <b>Voucher</b></button>
 <button class="small-button" onclick="openLogin(event, 'UP')" id="userpass"> <b>Member</b></button> 	
 <p style="margin-top:10px">
-$(if error)
+
+	
 <div class="alert alert-dismissible alert-info">
  <small>$(error)</small>
 </div>
-$(endif)
+
       <div id="KV" class="tabcontent">
-$(if chap-id)
+
         <form name="sendinkv" action="$(link-login-only)" method="post">
           <input type="hidden" name="username" />
           <input type="hidden" name="password" />
@@ -57,7 +58,7 @@ $(if chap-id)
             return false;
           }
         </script>
-        $(endif)
+     
 <form name="loginkv" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLoginkv()" $(endif)>
 <input type="hidden" name="dst" value="$(link-orig)" />
 <input type="hidden" name="popup" value="true" />
