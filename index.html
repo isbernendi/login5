@@ -81,7 +81,7 @@
 </div>
 </div>
       <div id="UP" class="tabcontent">
-        $(if chap-id)
+     
         <form name="sendinup" action="$(link-login-only)" method="post">
           <input type="hidden" name="username" />
           <input type="hidden" name="password" />
@@ -97,7 +97,7 @@
             return false;
           }
         </script>
-        $(endif)
+     
 <form name="loginup" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLoginup()" $(endif)>
 <input type="hidden" name="dst" value="$(link-orig)" />
 <input type="hidden" name="popup" value="true" />
@@ -133,9 +133,9 @@ document.getElementById("kodevoucher").click();
 
 								<p style="margin-top:10px">
 								<p style="font-size:13px;text-align:center"><font color="#333">
-							 $(if trial == 'yes') 
+							
 Uji coba gratis klik  <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><font color="#111"><b> . Gratis</b></a></font><br />
-							  $(endif)</font></p>	
+							 </font></p>	
 							<p style="margin-top:15px">
 							
 							<a href="status.html">
